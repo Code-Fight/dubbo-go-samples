@@ -1,0 +1,10 @@
+OpenJDK 64-Bit Server VM (25.345-b01) for linux-amd64 JRE (1.8.0_345-b01), built on Sep 21 2022 13:31:59 by "mockbuild" with gcc 4.8.5 20150623 (Red Hat 4.8.5-44)
+Memory: 4k page, physical 8148708k(147864k free), swap 0k(0k free)
+CommandLine flags: -XX:GCLogFileSize=104857600 -XX:InitialHeapSize=1073741824 -XX:MaxHeapSize=1073741824 -XX:MaxNewSize=536870912 -XX:NewSize=536870912 -XX:NumberOfGCLogFiles=10 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseGCLogFileRotation -XX:+UseParallelGC 
+2022-10-28T18:00:56.642+0800: 11.585: [GC (Metadata GC Threshold) [PSYoungGen: 393216K->6973K(458752K)] 393216K->7061K(983040K), 0.0141065 secs] [Times: user=0.03 sys=0.01, real=0.01 secs] 
+2022-10-28T18:00:56.656+0800: 11.599: [Full GC (Metadata GC Threshold) [PSYoungGen: 6973K->0K(458752K)] [ParOldGen: 88K->6900K(524288K)] 7061K->6900K(983040K), [Metaspace: 20456K->20456K(1069056K)], 0.0335199 secs] [Times: user=0.07 sys=0.01, real=0.03 secs] 
+2022-10-28T18:00:58.858+0800: 13.801: [GC (Allocation Failure) [PSYoungGen: 393216K->10432K(458752K)] 400116K->17340K(983040K), 0.0169554 secs] [Times: user=0.04 sys=0.01, real=0.02 secs] 
+2022-10-28T18:01:00.610+0800: 15.554: [GC (Allocation Failure) [PSYoungGen: 403648K->14676K(458752K)] 410556K->21584K(983040K), 0.0095193 secs] [Times: user=0.03 sys=0.01, real=0.00 secs] 
+2022-10-28T18:01:03.779+0800: 18.723: [GC (Metadata GC Threshold) [PSYoungGen: 332207K->15072K(458752K)] 339115K->21988K(983040K), 0.0348522 secs] [Times: user=0.10 sys=0.00, real=0.04 secs] 
+2022-10-28T18:01:03.815+0800: 18.758: [Full GC (Metadata GC Threshold) [PSYoungGen: 15072K->0K(458752K)] [ParOldGen: 6916K->20872K(524288K)] 21988K->20872K(983040K), [Metaspace: 33594K->33594K(1081344K)], 0.1317255 secs] [Times: user=0.36 sys=0.02, real=0.13 secs] 
+2022-10-28T18:14:45.604+0800: 840.547: [GC (Allocation Failure) [PSYoungGen: 393216K->15491K(458752K)] 414088K->36372K(983040K), 0.0142343 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 

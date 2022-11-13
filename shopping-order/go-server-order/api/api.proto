@@ -1,0 +1,79 @@
+// EDIT IT, change to your package, service and message
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package api;
+
+option go_package = "./;api";
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (User) {}
+  // Sends a greeting via stream
+  rpc SayHelloStream (stream HelloRequest) returns (stream User) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message User {
+  string name = 1;
+  string id = 2;
+  int32 age = 3;
+}
+
+service Order {
+  rpc CreateSo (CreateSoReq) returns (CreateSoResp) {}
+}
+
+message CreateSoReq {
+  repeated SoMaster soMaster = 1;
+}
+
+message SoMaster {
+  int64   sysNo = 1;
+  string  soId = 2;
+  int64   buyerUserSysNo = 3;
+  string  sellerCompanyCode = 4;
+  int64   receiveDivisionSysNo = 5;
+  string  receiveAddress = 6;
+  string  receiveZip = 7;
+  string  receiveContact = 8;
+  string  receiveContactPhone = 9;
+  int64   stockSysNo = 10;
+  int32   paymentType = 11;
+  float   soAmt = 12;
+  // status 10，创建成功，待支付；30；支付成功，待发货；50；发货成功，待收货；70，确认收货，已完成；90，下单失败；100已作废
+  int32   status = 13;
+  google.protobuf.Timestamp orderDate = 14;
+  google.protobuf.Timestamp paymentDate = 15;
+  google.protobuf.Timestamp deliveryDate = 16;
+  google.protobuf.Timestamp receiveDate = 17;
+  string appId = 18;
+  string memo = 19;
+  string createUser = 20;
+  google.protobuf.Timestamp gmtCreate = 21;
+  string modifyUser = 22;
+  google.protobuf.Timestamp gmtModified = 23;
+  repeated SoItem SoItems = 24;
+}
+
+message SoItem {
+  int64 sysNo = 1;
+  int64 soSysNo = 2;
+  int64 productSysNo = 3;
+  string productName = 4;
+  float costPrice = 5;
+  float originalPrice = 6;
+  float dealPrice = 7;
+  int32 quantity = 8;
+}
+
+message CreateSoResp {
+  repeated uint64 soSysNos = 1;
+}
